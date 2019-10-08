@@ -1,0 +1,16 @@
+C:\Users\jokes\source\repos\customeLIST\customeListTest\obj\Debug\customeListTest.csprojAssemblyReference.cache
+C:\Users\jokes\source\repos\customeLIST\customeListTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\jokes\source\repos\customeLIST\customeListTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\jokes\source\repos\customeLIST\customeListTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\jokes\source\repos\customeLIST\customeListTest\bin\Debug\customeListTest.dll
+C:\Users\jokes\source\repos\customeLIST\customeListTest\bin\Debug\customeListTest.pdb
+C:\Users\jokes\source\repos\customeLIST\customeListTest\bin\Debug\customeLIST.exe
+C:\Users\jokes\source\repos\customeLIST\customeListTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\jokes\source\repos\customeLIST\customeListTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\jokes\source\repos\customeLIST\customeListTest\bin\Debug\customeLIST.pdb
+C:\Users\jokes\source\repos\customeLIST\customeListTest\bin\Debug\customeLIST.exe.config
+C:\Users\jokes\source\repos\customeLIST\customeListTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\jokes\source\repos\customeLIST\customeListTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\jokes\source\repos\customeLIST\customeListTest\obj\Debug\customeListTest.csproj.CopyComplete
+C:\Users\jokes\source\repos\customeLIST\customeListTest\obj\Debug\customeListTest.dll
+C:\Users\jokes\source\repos\customeLIST\customeListTest\obj\Debug\customeListTest.pdb
