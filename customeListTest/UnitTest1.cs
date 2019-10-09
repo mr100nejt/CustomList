@@ -54,7 +54,7 @@ namespace CustomListTests
 
             // act
             testList.Add(234);
-            actual = testList.Count;
+            actual = testList.capacity;
 
             // assert
             Assert.AreEqual(expected, actual);
@@ -118,6 +118,154 @@ namespace CustomListTests
             // assert
             Assert.AreEqual(expected, actual);
         }
-    }
+
+
+        [TestMethod]
+        public void Remove_CheckToSeeIfRemovedFromTheEnd_Capacity()
+        {
+            // arrange
+            CustomList<int> testList = new CustomList<int>();
+            int expected = 235;
+            int actual;
+
+            // act
+            testList.Add(234);
+            testList.Add(235);
+            testList.Remove(234);
+
+            actual = testList[0];
+
+            // assert
+           Assert.AreEqual(expected, actual);
+   
+        }
+        [TestMethod]
+        public void Remove_CheckToSeeIfCountDecreases_Count()
+        {
+            // arrange
+            CustomList<int> testList = new CustomList<int>();
+            int expected = 1;
+            int actual;
+
+            // act
+            testList.Add(234);
+            testList.Add(235);
+            testList.Remove(235);
+            
+            actual = testList.Count;
+
+            // assert
+            Assert.AreEqual(expected, actual);
+
+        }
+
+        [TestMethod]
+        public void Remove_CheckToSeeIfRemovedFromTheEndIfMultipleRemoved_Capacity()
+        {
+            // arrange
+            CustomList<int> testList = new CustomList<int>();
+            int expected = 236;
+            int actual;
+
+            // act
+            testList.Add(234);
+            testList.Add(235);
+            testList.Add(236);
+            testList.Remove(234);
+            testList.Remove(235);
+            actual = testList[0];
+
+            // assert
+            Assert.AreEqual(expected, actual);
+
+        }
+        [TestMethod]
+        public void Remove_CheckToSeeIfMultipleOfSameOnlyOneRemoved_Count()
+        {
+            // arrange
+            CustomList<int> testList = new CustomList<int>();
+            int expected = 2;
+            int actual;
+
+            // act
+            testList.Add(234);
+            testList.Add(235);
+            testList.Add(235);
+            testList.Remove(235);
+            
+
+            actual = testList.Count;
+
+            // assert
+            Assert.AreEqual(expected, actual);
+
+        }
+        [TestMethod]
+        public void Remove_CheckToSeeIfMultipleOfSameRemovesFirstOne_Count()
+        {
+            // arrange
+            CustomList<int> testList = new CustomList<int>();
+            int expected = 234;
+            int actual;
+
+            // act
+            testList.Add(235);
+            testList.Add(234);
+            testList.Add(235);
+            testList.Add(236);
+            testList.Add(235);
+            testList.Remove(235);
+            
+
+            actual = testList[0];
+
+            // assert
+            Assert.AreEqual(expected, actual);
+
+        }
+        [TestMethod]
+        public void Remove_CheckToSeeIfMultipleRemovedCountDecreases_Count()
+        {
+            // arrange
+            CustomList<int> testList = new CustomList<int>();
+            int expected = 1;
+            int actual;
+
+            // act
+            testList.Add(234);
+            testList.Add(235);
+            testList.Add(235);
+            testList.Remove(235);
+            testList.Remove(235);
+
+            actual = testList.Count;
+
+            // assert
+            Assert.AreEqual(expected, actual);
+
+        }
+        [TestMethod]
+        public void Remove_CheckToSeeIfInvalidRemove_false()
+        {
+            // arrange
+            CustomList<int> testList = new CustomList<int>();
+            bool expected = false;
+            bool actual;
+
+            // act
+            testList.Add(234);
+            testList.Add(235);
+            testList.Add(235);
+            testList.Remove(235);
+            testList.Remove(235);
+
+            actual = testList.Victory;
+
+            // assert
+            Assert.AreEqual(expected, actual);
+
+        }
+
+    }    
 }
 

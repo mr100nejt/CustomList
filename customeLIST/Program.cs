@@ -10,9 +10,10 @@ namespace customeLIST
     {
         static void Main(string[] args)
         {
-            CustomList<string> testList = new CustomList<string>();
-            testList.Add("12");
-            testList.Add("13");
+            CustomList<int> testList = new CustomList<int>();
+            testList.Add(12);
+            testList.Add(13);
+            testList.Remove(12);
             Console.ReadLine();
 
 

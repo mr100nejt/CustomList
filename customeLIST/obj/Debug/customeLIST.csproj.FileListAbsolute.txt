@@ -4,3 +4,9 @@ C:\Users\jokes\source\repos\customeLIST\customeLIST\bin\Debug\customeLIST.exe
 C:\Users\jokes\source\repos\customeLIST\customeLIST\bin\Debug\customeLIST.pdb
 C:\Users\jokes\source\repos\customeLIST\customeLIST\obj\Debug\customeLIST.exe
 C:\Users\jokes\source\repos\customeLIST\customeLIST\obj\Debug\customeLIST.pdb
+C:\Users\jokes\Desktop\c# devCodeCamp projects\customeLIST\customeLIST\bin\Debug\customeLIST.exe.config
+C:\Users\jokes\Desktop\c# devCodeCamp projects\customeLIST\customeLIST\bin\Debug\customeLIST.exe
+C:\Users\jokes\Desktop\c# devCodeCamp projects\customeLIST\customeLIST\bin\Debug\customeLIST.pdb
+C:\Users\jokes\Desktop\c# devCodeCamp projects\customeLIST\customeLIST\obj\Debug\customeLIST.csprojAssemblyReference.cache
+C:\Users\jokes\Desktop\c# devCodeCamp projects\customeLIST\customeLIST\obj\Debug\customeLIST.exe
+C:\Users\jokes\Desktop\c# devCodeCamp projects\customeLIST\customeLIST\obj\Debug\customeLIST.pdb
