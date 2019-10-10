@@ -266,6 +266,125 @@ namespace CustomListTests
 
         }
 
-    }    
+       
+        [TestMethod]
+        public void ToString_CheckToSeeIfIntListBecomesString_ToString()
+        {
+            // arrange
+            CustomList<int> testList = new CustomList<int>();
+            string expected = "234,235,236,";
+            string actual;
+
+            // act
+            testList.Add(234);
+            testList.Add(235);
+            testList.Add(236);
+             
+            
+            actual = testList.ToString();
+
+
+            
+           
+
+            // assert
+            Assert.AreEqual(expected, actual);
+
+        }
+        [TestMethod]
+        public void ToString_CheckToSeeIfBoolListBecomesString_ToString()
+        {
+            // arrange
+            CustomList<bool> testList = new CustomList<bool>();
+            string expected = "True,True,False,";
+            string actual;
+            bool A = true;
+            bool B = true;
+            bool C = false;
+
+            // act
+            testList.Add(A);
+            testList.Add(B);
+            testList.Add(C);
+
+
+            actual = testList.ToString();
+
+
+
+
+
+            // assert
+            Assert.AreEqual(expected, actual);
+
+        }
+        [TestMethod]
+        public void ToString_CheckToSeeIfStringListBecomesString_ToString()
+        {
+            // arrange
+            CustomList<string> testList = new CustomList<string>();
+            string expected = "pizza,poptart,popcorn,";
+            string actual;
+           
+
+            // act
+            testList.Add("pizza");
+            testList.Add("poptart");
+            testList.Add("popcorn");
+
+
+            actual = testList.ToString();
+
+
+
+
+
+            // assert
+            Assert.AreEqual(expected, actual);
+
+        }
+        [TestMethod]
+        public void Combine_combineTwoList_Combine()
+        {
+            // arrange
+            CustomList<int> testList = new CustomList<int>();
+            CustomList<int> testList2 = new CustomList<int>();
+            int expected = 5;
+            CustomList<int> actual;
+
+            // act
+            testList.Add(234);        
+            testList2.Add(237);
+           
+            actual = testList + testList2 ;
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Combine_combineTwoListWithMultipleItems_Combine()
+        {
+            // arrange
+            CustomList<int> testList = new CustomList<int>();
+            CustomList<int> testList2 = new CustomList<int>();
+            int expected = 5;
+            CustomList<int> actual;
+
+            // act
+            testList.Add(234);
+            testList.Add(235);
+            testList.Add(236);
+            testList2.Add(237);
+            testList2.Add(238);
+            testList2.Add(239);
+            actual = testList + testList2;
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+
+
+    }
+
 }
 
