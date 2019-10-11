@@ -319,7 +319,7 @@ namespace CustomListTests
 
         }
         [TestMethod]
-        public void ToString_CheckToSeeIfStringListBecomesString_ToString()
+        public void ToString_CheckToSeeIfStringListBecomesString_Addition()
         {
             // arrange
             CustomList<string> testList = new CustomList<string>();
@@ -349,27 +349,28 @@ namespace CustomListTests
             // arrange
             CustomList<int> testList = new CustomList<int>();
             CustomList<int> testList2 = new CustomList<int>();
-            int expected = 5;
-            CustomList<int> actual;
+            int expected = 237;
+            int actual;
 
             // act
-            testList.Add(234);        
+            testList.Add(234);
             testList2.Add(237);
-           
-            actual = testList + testList2 ;
+            CustomList<int> NewList = testList + testList2;
+             actual = NewList[1]; 
 
             // assert
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void Combine_combineTwoListWithMultipleItems_Combine()
+        public void Combine_combineTwoListWithMultipleItems_Addition()
         {
             // arrange
             CustomList<int> testList = new CustomList<int>();
             CustomList<int> testList2 = new CustomList<int>();
-            int expected = 5;
-            CustomList<int> actual;
-
+            CustomList<int> NewList;
+            int expected = 237;
+            int acutual;
+ 
             // act
             testList.Add(234);
             testList.Add(235);
@@ -377,10 +378,11 @@ namespace CustomListTests
             testList2.Add(237);
             testList2.Add(238);
             testList2.Add(239);
-            actual = testList + testList2;
+            NewList = testList + testList2;
+            acutual = NewList[3];
 
             // assert
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, acutual);
         }
 
 

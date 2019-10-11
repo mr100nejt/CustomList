@@ -16,11 +16,15 @@ namespace customeLIST
         public static int StaticCount;
         public  int Count;
         public int newCount;
-        private static T[] items = new T[1];
-        private static T[] items2;
+        private  T[] items = new T[1];
+        private  T[] items2;
+        private T[] items3;
         public static CustomList<T> addedList; 
         public string NewString;
-        public string join;
+        public CustomList()
+        {
+            
+        }
 
         public T this[int i]
         {
@@ -98,9 +102,12 @@ namespace customeLIST
             {
                 Count++;
             }
+
             capacity++;
-            StaticCount = Count; 
-        }
+            StaticCount = Count;
+
+           
+        }  
         public void Remove(T itemToRemove)
         {
             for (int i = 0; i < Count; i++)
@@ -154,7 +161,7 @@ namespace customeLIST
         }
         public override string ToString()
         {
-            string[] items3 = new string[Count];
+            
             for (int i = 0; i < Count; i++)
             {
 
@@ -169,9 +176,10 @@ namespace customeLIST
         }
         public static CustomList<T> operator +(CustomList<T> listToAddTo, CustomList<T> ListToAdd)
         {
-            for (int i = 0; i < StaticCount; i++)
+            for (int i = 0; i < ListToAdd.Count; i++)
             {
-                 listToAddTo.Add(ListToAdd[i]); 
+                
+                listToAddTo.Add(ListToAdd[i]); 
             }
             return listToAddTo;   
         }
