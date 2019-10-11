@@ -344,7 +344,7 @@ namespace CustomListTests
 
         }
         [TestMethod]
-        public void Combine_combineTwoList_Combine()
+        public void Combine_combineTwoList_Addiition()
         {
             // arrange
             CustomList<int> testList = new CustomList<int>();
@@ -370,7 +370,51 @@ namespace CustomListTests
             CustomList<int> NewList;
             int expected = 237;
             int acutual;
- 
+
+            // act
+            testList.Add(234);
+            testList.Add(235);
+            testList.Add(236);
+            testList2.Add(237);
+            testList2.Add(238);
+            testList2.Add(239);
+            NewList = testList + testList2;
+            acutual = NewList[3];
+
+            // assert
+            Assert.AreEqual(expected, acutual);
+
+        }
+            
+            [TestMethod]
+        public void Subtraction_RemoveTwoListWithOneItem_Subtraction()
+        {
+            // arrange
+            CustomList<int> testList = new CustomList<int>();
+            CustomList<int> testList2 = new CustomList<int>();
+            int expected = 236;
+            int actual;
+
+            // act
+            testList.Add(236);
+            testList.Add(234);
+            testList2.Add(234);
+            CustomList<int> NewList = testList - testList2;
+            actual = NewList[0];
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Subtraction_RemoveListWithMultipleItems_Subtraction()
+        {
+            // arrange
+            CustomList<int> testList = new CustomList<int>();
+            CustomList<int> testList2 = new CustomList<int>();
+            CustomList<int> NewList;
+            int expected = 237;
+            int acutual;
+
             // act
             testList.Add(234);
             testList.Add(235);
@@ -384,7 +428,57 @@ namespace CustomListTests
             // assert
             Assert.AreEqual(expected, acutual);
         }
+        [TestMethod]
+        public void Zipper_ZipTwoListWithMultipleItems_Zipper()
+        {
+            // arrange
+            CustomList<int> testList = new CustomList<int>();
+            CustomList<int> testList2 = new CustomList<int>();
+            int[] NewList;
+            int expected = 237;
+            int acutual;
 
+            // act
+            testList.Add(234);
+            testList.Add(235);
+            testList.Add(236);
+            testList2.Add(237);
+            testList2.Add(238);
+            testList2.Add(239);
+            NewList = CustomList<int>.Zipper(testList, testList2);
+            acutual = NewList[1];
+
+            // assert
+            Assert.AreEqual(expected, acutual);
+
+        }
+        [TestMethod]
+        public void Zipper_ZipTwoListWithUnevenAmmountsMultipleItems_Zipper()
+        {
+            // arrange
+            CustomList<int> testList = new CustomList<int>();
+            CustomList<int> testList2 = new CustomList<int>();
+            int[] NewList;
+            int expected = 242;
+            int acutual;
+
+            // act
+            testList.Add(234);
+            testList.Add(235);
+            testList.Add(236);
+            testList2.Add(237);
+            testList2.Add(238);
+            testList2.Add(239);
+            testList2.Add(240);
+            testList2.Add(241);
+            testList2.Add(242);
+            NewList = CustomList<int>.Zipper(testList, testList2);
+            acutual = NewList[8];
+
+            // assert
+            Assert.AreEqual(expected, acutual);
+
+        }
 
     }
 
